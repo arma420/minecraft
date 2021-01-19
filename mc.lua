@@ -5,11 +5,8 @@ speaker.playSound("minecraft:block.note_block.harp")
 local amount = 0
 local balance = 0
 local event, button, x, y
-while true do
-event, button, x, y = os.pullEvent("mouse_click")
-end
-monitor.clear()
-
+monitor.write("Kraunasi...")
+monitor.setBackgroundColour("1")
 local inMain = true
 monitor.clear()
 monitor.setBackgroundColour("0")
@@ -82,3 +79,6 @@ end
 return dice
 end
 
+while true do
+event, button, x, y = os.pullEvent("mouse_click")
+end
