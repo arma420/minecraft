@@ -6,6 +6,8 @@ local amount = 10
 local balance = 100
 monitor.write("Kraunasi...")
 monitor.setBackgroundColour(5)
+Main()
+function Main()
 local inMain = true
 monitor.clear()
 monitor.setBackgroundColour(8)
@@ -18,7 +20,7 @@ inMain = false
 Game()
 end
 end
-
+end
 function Game()
 monitor.clear()
 local inMainGame = true
