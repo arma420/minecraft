@@ -7,7 +7,7 @@ local balance = 100
 monitor.write("Kraunasi...")
 monitor.setBackgroundColour(5)
 Main()
-function Main()
+function Main() 
 local inMain = true
 monitor.clear()
 monitor.setBackgroundColour(8)
