@@ -55,42 +55,31 @@ if x == 15 and y == 10 then
 inMainGame = false
 end
 end
-
 monitor.clear()
 local player = 0
 local ai = 0
 monitor.setCursorPos(1,1)
 monitor.write(math.floor(player))
-for i=1,4 do
-if i == 1 then
 monitor.setCursorPos(6,6)
 math.randomseed(os.time)
 local dice = math.floor(math.random(1,6))
 player = player + dice
 monitor.write(dice)
-end
-if i == 2 then
 monitor.setCursorPos(7,6)
 math.randomseed(os.time)
 local dice = math.floor(math.random(1,6))
 ai = ai + dice
 monitor.write(dice)
-end
-if i == 3 then
 monitor.setCursorPos(8,6)
 math.randomseed(os.time)
 local dice = math.floor(math.random(1,6))
 player = player + dice
 monitor.write(dice)
-end
-if i == 4 then
 monitor.setCursorPos(9,6)
 math.randomseed(os.time)
 local dice = math.floor(math.random(1,6))
 ai = ai + dice
 monitor.write(dice)
-end
-end
 monitor.setCursorPos(1,1)
 monitor.write(math.floor(player))
 monitor.setCursorPos(1,2)
