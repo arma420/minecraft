@@ -26,7 +26,7 @@ monitor.setCursorPos(15,12)
 monitor.write("Balansas:" ..balance-amount.." Eur.")
 monitor.setCursorPos(17,8)
 monitor.blit("+","1","2")
-monitor.setCursorPos(20,8)
+monitor.setCursorPos(23,8)
 monitor.blit("-","1","2")
 monitor.setCursorPos(15,10)
 monitor.blit("ZAISTI","111111","222222")
@@ -38,9 +38,9 @@ monitor.setCursorPos(15,7)
 monitor.clearLine()
 monitor.write("Statymas:" ..amount.." Eur.")
 monitor.setCursorPos(15,12)
-monitor.write("Balansas:" ..balance-amount.." Eur.")
+monitor.write("Balansas:" ..balance - amount.." Eur.")
 end
-if  x == 20 and y == 8 then
+if  x == 23 and y == 8 then
 amount = amount - 1
 if amount < 1 then
 amount = 1
