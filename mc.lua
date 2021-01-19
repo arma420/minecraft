@@ -6,7 +6,7 @@ local amount = 10
 local balance = 100
 monitor.write("Kraunasi...")
 monitor.setBackgroundColour(5)
-Main()
+
 function Main() 
 local inMain = true
 monitor.clear()
@@ -96,8 +96,8 @@ monitor.write(ai)
 if player > ai then
 monitor.clear()
 monitor.setCursorPos(15,10)
-monitor.write("Laimejai" ..amount *2)
-balance = balance + amount * 2
+monitor.write("Laimejai " ..amount*2.." Eur.")
+balance = balance + amount
 elseif player < ai then
 monitor.clear()
 monitor.setCursorPos(15,10)
@@ -112,7 +112,7 @@ balance = balance + amount * 2
 balance = balance
 end
 monitor.setCursorPos(15,12)
-monitor.write("Testi")
+monitor.blit("Testi","11111","aaaaa")
 while true do
 local event, button, x, y = os.pullEvent("monitor_touch")
 if   x == 15 and y == 12 then
@@ -120,3 +120,6 @@ Game()
 end
 end
 
+end
+
+Main()
