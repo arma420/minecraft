@@ -119,7 +119,6 @@ if   x == 15 and y == 12 then
 Game()
 end
 end
-
 end
 
 Main()
