@@ -20,6 +20,7 @@ end
 
 monitor.clear()
 local inMainGame = true
+
 monitor.setCursorPos(15,7)
 monitor.write("Statymas:" ..amount.." Eur.")
 monitor.setCursorPos(15,12)
@@ -61,22 +62,22 @@ local ai = 0
 monitor.setCursorPos(1,1)
 monitor.write(math.floor(player))
 monitor.setCursorPos(6,6)
-math.randomseed(os.time)
+math.randomseed(os.time())
 local dice = math.floor(math.random(1,6))
 player = player + dice
 monitor.write(dice)
-monitor.setCursorPos(7,6)
-math.randomseed(os.time)
+monitor.setCursorPos(20,6)
+math.randomseed(os.time())
 local dice = math.floor(math.random(1,6))
 ai = ai + dice
 monitor.write(dice)
-monitor.setCursorPos(8,6)
-math.randomseed(os.time)
+monitor.setCursorPos(6,7)
+math.randomseed(os.time())
 local dice = math.floor(math.random(1,6))
 player = player + dice
 monitor.write(dice)
-monitor.setCursorPos(9,6)
-math.randomseed(os.time)
+monitor.setCursorPos(20,7)
+math.randomseed(os.time())
 local dice = math.floor(math.random(1,6))
 ai = ai + dice
 monitor.write(dice)
