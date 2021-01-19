@@ -6,7 +6,7 @@ local amount = 0
 local balance = 0
 local event, button, x, y
 monitor.write("Kraunasi...")
-monitor.setBackgroundColour("1")
+monitor.setBackgroundColour("2")
 local inMain = true
 monitor.clear()
 monitor.setBackgroundColour("0")
