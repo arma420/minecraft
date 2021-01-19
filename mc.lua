@@ -53,7 +53,6 @@ monitor.write("Balansas:" ..balance-amount.." Eur.")
 end
 if x == 15 and y == 10 then
 inMainGame = false
-GameWindow()
 end
 end
 
