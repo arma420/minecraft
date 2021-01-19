@@ -57,7 +57,6 @@ end
 end
 
 monitor.clear()
-local dice = getDice()
 local player = 0
 local ai = 0
 monitor.setCursorPos(1,1)
