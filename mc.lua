@@ -2,7 +2,7 @@ local monitor = peripheral.find("monitor")
 local speaker = peripheral.find("speaker")
 monitor.clear()
 speaker.playSound("minecraft:block.note_block.harp")
-local amount = 0
+local amount = 10
 local balance = 0
 monitor.write("Kraunasi...")
 monitor.setBackgroundColour(5)
@@ -21,7 +21,7 @@ end
 monitor.clear()
 local inMainGame = true
 monitor.setCursorPos(15,7)
-monitor.blit("Statymas:" + amount ,"1111111111","2222222222")
+monitor.blit("Statymas:" ..amount.."€")
 monitor.setCursorPos(13,7)
 monitor.blit("+","1","2")
 monitor.setCursorPos(17,7)
@@ -33,12 +33,14 @@ local event, button, x, y = os.pullEvent("monitor_touch")
 if   x == 7 and y == 13 then
 amount = amout + 1
 monitor.setCursorPos(15,7)
-monitor.blit("Statymas:" + amount ,"1111111111","2222222222")
+monitor.clearLine()
+monitor.blit("Statymas:" ..amount.."€")
 end
 if  x == 17 and y == 7 then
 amount = amount - 1
 monitor.setCursorPos(15,7)
-monitor.blit("Statymas:" + amount ,"1111111111","2222222222")
+monitor.clearLine()
+monitor.blit("Statymas:" ..amount.."€")
 end
 if x == 15 and y == 10 then
 inMainGame = false
