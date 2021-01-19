@@ -12,16 +12,12 @@ monitor.setBackgroundColour(8)
 monitor.setCursorPos(15,7)
 monitor.blit("PRADETI","1111111","2222222")
 while inMain do
-local event, button, x, y = monitor.pullEvent("monitor_touch")
-if button == 1 and x == 10 and y == 20 then
+local event, button, x, y = os.pullEvent("monitor_touch")
+if  x == 7 and y == 15 then
 inMain = false
-StartGame()
 end
 end
 
-
-
-function StartGame()
 monitor.clear()
 local inMainGame = true
 monitor.setCursorPos(15,7)
@@ -33,23 +29,27 @@ monitor.blit("-","1","2")
 monitor.setCursorPos(15,10)
 monitor.blit("ZAISTI","111111","222222")
 while inMainGame do
-local event, button, x, y = os.pullEvent("mouse_click")
-if button == 1 and x == 12 and y == 18 then
+local event, button, x, y = os.pullEvent("monitor_touch")
+if   x == 7 and y == 13 then
 amount = amout + 1
 monitor.setCursorPos(15,7)
 monitor.blit("Statymas:" + amount ,"1111111111","2222222222")
 end
-if button == 1 and x == 12 and y == 22 then
+if  x == 17 and y == 7 then
 amount = amount - 1
 monitor.setCursorPos(15,7)
 monitor.blit("Statymas:" + amount ,"1111111111","2222222222")
 end
-if button == 1 and x == 16 and y == 20 then
+if x == 15 and y == 10 then
 inMainGame = false
 GameWindow()
 end
 end
-end
+
+
+
+
+
 function GameWindow()
 local dice = getDice()
 for i=1,4 do
