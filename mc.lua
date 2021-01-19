@@ -49,30 +49,40 @@ end
 end
 
 
-
-
-
-function GameWindow()
 local dice = getDice()
+local player = 0
+local ai = 0
 for i=1,4 do
 if i == 1 then
-monitor.setCursorPos(5,10)
-monitor.blit(dice[i],"1","2")
+monitor.setCursorPos(6,6)
+math.randomseed(os.time)
+local dice = math.random(1,6)
+player = player + dice
+monitor.write(dice)
 end
 if i == 2 then
-monitor.setCursorPos(6,10)
-monitor.blit(dice[i],"1","2")
+monitor.setCursorPos(7,6)
+math.randomseed(os.time)
+local dice = math.random(1,6)
+ai = ai + dice
+monitor.write(dice)
 end
 if i == 3 then
-monitor.setCursorPos(7,10)
-monitor.blit(dice[i],"1","2")
+monitor.setCursorPos(8,6)
+math.randomseed(os.time)
+local dice = math.random(1,6)
+player = player + dice
+monitor.write(dice)
 end
 if i == 4 then
-monitor.setCursorPos(8,10)
-monitor.blit(dice[i],"1","2")
+monitor.setCursorPos(9,6)
+math.randomseed(os.time)
+local dice = math.random(1,6)
+ai = ai + dice
+monitor.write(dice)
 end
 end
-end
+
 
 function getDice()
 local dice
