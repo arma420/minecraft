@@ -4,7 +4,6 @@ monitor.clear()
 speaker.playSound("minecraft:block.note_block.harp")
 local amount = 0
 local balance = 0
-local event, button, x, y
 monitor.write("Kraunasi...")
 monitor.setBackgroundColour("2")
 local inMain = true
@@ -13,6 +12,7 @@ monitor.setBackgroundColour("0")
 monitor.setCursorPos(10,20)
 monitor.blit("PRADETI","1111111","2222222")
 while inMain do
+local event, button, x, y = os.pullEvent("mouse_click")
 if button == 1 and x == 10 and y == 20 then
 inMain = false
 StartGame()
@@ -23,7 +23,7 @@ end
 
 function StartGame()
 monitor.clear()
-local inMain = true
+local inMainGame = true
 monitor.setCursorPos(10,20)
 monitor.blit("Statymas:" + amount ,"1111111111","2222222222")
 monitor.setCursorPos(12,18)
@@ -32,7 +32,8 @@ monitor.setCursorPos(12,22)
 monitor.blit("-","1","2")
 monitor.setCursorPos(16,20)
 monitor.blit("ZAISTI","111111","222222")
-while inMain do
+while inMainGame do
+local event, button, x, y = os.pullEvent("mouse_click")
 if button == 1 and x == 12 and y == 18 then
 amount = amout + 1
 monitor.setCursorPos(10,20)
@@ -44,6 +45,7 @@ monitor.setCursorPos(10,20)
 monitor.blit("Statymas:" + amount ,"1111111111","2222222222")
 end
 if button == 1 and x == 16 and y == 20 then
+inMainGame = false
 GameWindow()
 end
 end
@@ -77,8 +79,4 @@ math.randomseed(os.time)
 dice[i] = math.random(1,6)
 end
 return dice
-end
-
-while true do
-event, button, x, y = os.pullEvent("mouse_click")
 end
