@@ -8,9 +8,8 @@ local event, button, x, y
 while true do
 event, button, x, y = os.pullEvent("mouse_click")
 end
-MainScreen()
 monitor.clear()
-function MainScreen()
+
 local inMain = true
 monitor.clear()
 monitor.setBackgroundColour("0")
@@ -18,10 +17,11 @@ monitor.setCursorPos(10,20)
 monitor.blit("PRADETI","1111111","2222222")
 while inMain do
 if button == 1 and x == 10 and y == 20 then
+inMain = false
 StartGame()
 end
 end
-end
+
 
 
 function StartGame()
@@ -37,12 +37,12 @@ monitor.setCursorPos(16,20)
 monitor.blit("ZAISTI","111111","222222")
 while inMain do
 if button == 1 and x == 12 and y == 18 then
-amount++
+amount = amout + 1
 monitor.setCursorPos(10,20)
 monitor.blit("Statymas:" + amount ,"1111111111","2222222222")
 end
 if button == 1 and x == 12 and y == 22 then
-amount--
+amount = amount - 1
 monitor.setCursorPos(10,20)
 monitor.blit("Statymas:" + amount ,"1111111111","2222222222")
 end
