@@ -5,10 +5,10 @@ speaker.playSound("minecraft:block.note_block.harp")
 local amount = 0
 local balance = 0
 monitor.write("Kraunasi...")
-monitor.setBackgroundColour("2")
+monitor.setBackgroundColour(5)
 local inMain = true
 monitor.clear()
-monitor.setBackgroundColour("0")
+monitor.setBackgroundColour(8)
 monitor.setCursorPos(10,20)
 monitor.blit("PRADETI","1111111","2222222")
 while inMain do
